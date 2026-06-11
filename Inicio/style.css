@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Commissioner:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;           /* força o main a ocupar a largura toda */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  background-color: #202022;
+  color: #d4d4d4;
+  font-family: "Commissioner", sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 8rem;
+  padding-bottom: 3rem;
+}
+
+.conteudoInicio {
+  padding: 2rem;
+  background-color: #555555;
+  border-radius: 50px;
+  max-width: 1000px;
+  width: 75%;
+  margin: 0 auto 2rem auto;
+  animation: fadeIn 0.6s ease;   /* era 60s */
+  transition: transform 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 10rem;
+}
+
+.titulo {
+  font-size: 85px;
+  text-align: center;
+  padding: 1rem;
+  background-color: #555555;
+  border-radius: 50px;
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto 3rem auto;
+  animation: fadeIn 0.6s ease;   /* era 60s */
+  align-self: center;
+}
+
+#descrição {
+  padding: 2rem;
+  background-color: #555555;
+  border-radius: 50px;
+  max-width: 900px;
+  width: 75%;
+  margin: 0 auto 2rem auto;
+  animation: fadeIn 0.6s ease;   /* era 60s */
+  transition: transform 0.5s ease;
+}
+
+#descrição .conteudo {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#descrição .texto {
+  flex: 1;
+}
+
+#descrição .texto h2 {
+  white-space: nowrap;
+  margin-bottom: 0.5rem;
+}
+
+#descrição:hover, .conteudoInicio:hover, .hab:hover, .contacts:hover {
+  transform: scale(1.02);        /* removeu os transition duplicados */
+}
+
+img {
+  width: 220px;              /* levemente menor */
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.hab {
+  padding: 2rem;
+  background-color: #555555;
+  border-radius: 50px;
+  max-width: 1000px;
+  width: 75%;
+  margin: 0 auto 2rem auto;
+  animation: fadeIn 0.6s ease;   /* era 60s */
+  transition: transform 0.5s ease;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 10rem;
+}
+
+#tituloContato {
+  font-size: 85px;
+  text-align: center;
+  padding: 1rem;
+  background-color: #555555;
+  border-radius: 50px;
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto 3rem auto;
+  animation: fadeIn 0.6s ease;
+  align-self: center;
+}
+
+#tituloContato h2 {
+  width: 100%;           /* força o h2 a respeitar o card */
+  }
+
+  .contacts {
+  padding: 2rem;
+  background-color: #555555;
+  border-radius: 50px;
+  max-width: 1000px;
+  width: 75%;
+  margin: 0 auto 2rem auto;
+  animation: fadeIn 0.6s ease;   /* era 60s */
+  transition: transform 0.5s ease;
+  display: flex;
+  align-items: center;
+  gap: rem;
+  margin-bottom: 10rem;
+  justify-content: space-between;
+  }
+
+  main a {
+    text-decoration: none;
+    color: #d4d4d4;
+  }
+
+#navbar {
+  position: fixed;
+  top: 0rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: #2b2b2b;
+  border-radius: 0px;
+  width: 90%;
+  margin-top: 2rem;
+  border-radius: 50px;
+}
+
+.nav-logo, header a {
+  font-size: 18px;
+  font-weight: 700;
+  color: #d4d4d4;
+  white-space: nowrap;
+  margin-right: 2rem;
+  text-decoration: none;
+  color: #d4d4d4;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;  /* distribui o espaço igualmente */
+  flex: 1;                        /* ul ocupa todo o espaço restante */
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: #d4d4d4;
+  font-size: 16px;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+#navbar ul li a:hover {
+  color: #ffffff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.titulo, #descrição, .conteudoInicio, .hab, #tituloContato{
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
